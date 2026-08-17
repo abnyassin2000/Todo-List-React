@@ -8,6 +8,7 @@ import Form from "./components/Form";
 import Tasks from "./components/Tasks";
 import { TodosContext } from "./context/TasksContext";
 import TodoProvider from "./context/TasksContext";
+import Filter from "./components/Filter";
 function App() {
   return (
     <TodoProvider>
@@ -16,6 +17,7 @@ function App() {
           <div className="todo">
             <Title />
             <Form />
+            <Filter/>
             <Tasks/>
           </div>
         </div>

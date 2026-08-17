@@ -13,9 +13,13 @@ https://todo-list-react-eight-iota.vercel.app/
 - Add new tasks
 - Delete tasks
 - Mark tasks as completed
-- Visual feedback for completed tasks
-- Save tasks using localStorage
-- State management with React Context API
+- Filter tasks by:
+  - All
+  - Active
+  - Completed
+- Persistent tasks using localStorage
+- Shared state management with Context API
+- Controlled form inputs
 - Responsive UI
 
 ## 🛠️ Technologies
@@ -23,15 +27,31 @@ https://todo-list-react-eight-iota.vercel.app/
 - React
 - JavaScript
 - CSS
-- React Context API
+- Context API
 - localStorage
 - Vite
+
+## 🧠 What I Learned
+
+Through this project, I practiced:
+
+- Building reusable React components
+- Managing state with `useState`
+- Handling side effects with `useEffect`
+- Using Context API for shared state
+- Avoiding prop drilling
+- Working with controlled inputs
+- Using `map()` and `filter()`
+- Creating derived data from state
+- Persisting data with localStorage
+- Deploying a React application with Vercel
 
 ## 📂 Project Structure
 
 ```text
 src/
 ├── components/
+│   ├── Filter.jsx
 │   ├── Form.jsx
 │   ├── Tasks.jsx
 │   └── Title.jsx
@@ -40,4 +60,5 @@ src/
 │   └── TasksContext.jsx
 │
 ├── App.jsx
+├── App.css
 └── main.jsx

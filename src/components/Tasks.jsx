@@ -1,8 +1,17 @@
 import React, { useContext } from "react";
 import { TodosContext } from "../context/TasksContext";
 const Tasks = () => {
-  const { listOfTasks, deleteTask, toggleCompleted } = useContext(TodosContext);
-  const renderList = listOfTasks.map((task) => {
+  const { listOfTasks, deleteTask, toggleCompleted,currentCategory } = useContext(TodosContext);
+  const filterTasks = listOfTasks.filter((task)=>{
+    if(currentCategory=== "active"){
+      return !task.isCompleted
+    }else if(currentCategory === "completed"){
+      return task.isCompleted
+    }else{
+      return true
+    }
+  })
+  const renderList = filterTasks.map((task) => {
     return (
       <li
         key={task.id}
